@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include <cmath> 
+#include <cmath>    
 #include <locale> 
 
 using namespace std;
@@ -37,8 +37,17 @@ int main() {
     double length, width;
     cout << "Введите длину прямоугольника: ";
     cin >> length;
+    if (length <= 0) {
+        cout << "Введено неположительное число. Ошибка." << endl;
+        return 0;
+    }
+
     cout << "Введите ширину прямоугольника: ";
     cin >> width;
+    if (width <= 0) {
+        cout << "Введено неположительное число. Ошибка." << endl;
+        return 0;
+    }
 
     cout << "\nПрямоугольник:" << endl;
     cout << "Периметр: " << rectanglePerimeter(length, width) << endl;
@@ -49,14 +58,38 @@ int main() {
     double base1, base2, side1, side2, height;
     cout << "\nВведите длину первого основания трапеции: ";
     cin >> base1;
+    if (base1 <= 0) {
+        cout << "Введено неположительное число. Ошибка." << endl;
+        return 0;
+    }
+
     cout << "Введите длину второго основания трапеции: ";
     cin >> base2;
+    if (base2 <= 0) {
+        cout << "Введено неположительное число. Ошибка." << endl;
+        return 0;
+    }
+
     cout << "Введите длину первой боковой стороны трапеции: ";
     cin >> side1;
+    if (side1 <= 0) {
+        cout << "Введено неположительное число. Ошибка." << endl;
+        return 0;
+    }
+
     cout << "Введите длину второй боковой стороны трапеции: ";
     cin >> side2;
+    if (side2 <= 0) {
+        cout << "Введено неположительное число. Ошибка." << endl;
+        return 0;
+    }
+
     cout << "Введите высоту трапеции: ";
     cin >> height;
+    if (height <= 0) {
+        cout << "Введено неположительное число. Ошибка." << endl;
+        return 0;
+    }
 
     cout << "\nТрапеция:" << endl;
     cout << "Периметр: " << trapezoidPerimeter(base1, base2, side1, side2) << endl;
